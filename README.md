@@ -1,4 +1,6 @@
-# mz-vue-template
+# {{name}}
+
+{{description}}
 
 ## Project setup
 ```
