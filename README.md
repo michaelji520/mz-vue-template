@@ -2,6 +2,24 @@
 
 {{description}}
 
+## Project Directorys
+
+```
+project
+|-- public
+|   |-- index.html
+|   |-- favicon.ico
+|-- src
+    |-- api
+    |-- assets
+    |-- common
+    |-- components
+    |-- router
+    |-- store
+    |-- views
+```
+
+
 ## Project setup
 ```
 npm install
