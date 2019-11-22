@@ -3,6 +3,7 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 import service from './common/service';
+import './common/reset.less';
 
 Vue.config.productionTip = false;
 
