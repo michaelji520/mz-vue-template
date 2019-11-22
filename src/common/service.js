@@ -14,7 +14,7 @@ function send(options) {
   return new Promise((resolve, reject) => {
     axios(options).then((response) => {
       // You can do custom data process here
-      let data = response.data;
+      const { data } = response;
       resolve(data);
     }).catch((err) => {
       // You can define custom error handler here
