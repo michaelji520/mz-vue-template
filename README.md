@@ -8,7 +8,7 @@
 project
 |-- public
 |   |-- index.html
-|   |-- favicon.ico
+|   └-- favicon.ico
 |-- src
 |   |-- api: for async request definitions
 |   |-- assets: for static file, eg. fonts, images, etc.
@@ -16,7 +16,7 @@ project
 |   |-- components: for universal components
 |   |-- router: for vue-router
 |   |-- store: for vuex
-|   |-- views: for page components
+|   └-- views: for page components
 |-- .browserslistrc: config for `browserslist`
 |-- .editorconfig: consistent coding styles config for various editors and IDEs
 |-- .eslintrc.js: eslint config, default: Airbnb style
@@ -24,7 +24,7 @@ project
 |-- babel.config.js: babel config
 |-- package.json
 |-- postcss.config.js
-|-- README.md
+└-- README.md
 ```
 
 

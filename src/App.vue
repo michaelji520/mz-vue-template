@@ -8,6 +8,18 @@
   </div>
 </template>
 
+<script>
+export default {
+  created() {
+    this.$service.get('/json', {}).then((res) => {
+      console.log(res);
+    }).catch(() => {
+
+    });
+  },
+};
+</script>
+
 <style lang="less">
 #app {
   text-align: center;
