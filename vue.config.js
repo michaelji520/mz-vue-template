@@ -6,14 +6,19 @@ const mock = {
   server: 'your mock server address'
 };
 
-exec(`node ${path.resolve(__dirname, './mock/server.js')} > ${path.resolve(__dirname, './mock/access.log')}`, (err, stdout, stderr) => {
-  if (err) {
-    console.error('Failed to launch mock server!', err);
-    return;
-  }
-  console.log(stdout);
-  console.error(stderr);
-})
+// launch local mock server
+if (process.env.MOCK) {
+  console.log('launching local mock server...');
+  exec(`node ${path.resolve(__dirname, './mock/server.js')} > ${path.resolve(__dirname, './mock/access.log')}`, (err, stdout, stderr) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    console.log(stdout);
+    console.log(stderr);
+  });
+}
+
 
 module.exports = {
   devServer: {
