@@ -1,5 +1,5 @@
 const path = require('path');
-const { exec } = require('child_process');
+const execa= require('execa');
 // mock server list
 const mock = {
   localhost: 'http://localhost:9527',
@@ -9,14 +9,10 @@ const mock = {
 // launch local mock server
 if (process.env.MOCK) {
   console.log('launching local mock server...');
-  exec(`node ${path.resolve(__dirname, './mock/server.js')} > ${path.resolve(__dirname, './mock/access.log')}`, (err, stdout, stderr) => {
-    if (err) {
-      console.error(err);
-      return;
-    }
+  (async () => {
+    const { stdout } = await execa(`node ${path.resolve(__dirname, './mock/server.js')} > ${path.resolve(__dirname, './mock/access.log')}`);
     console.log(stdout);
-    console.log(stderr);
-  });
+  })();
 }
 
 
